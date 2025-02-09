@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: TO_OVERLAY
+  labels:
+    env: TO_OVERLAY
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: TO_OVERLAY
+  source:
+    repoURL: https://github.com/jterpstra1/argocd-k8s-resources.git
+    targetRevision: main
+    path: TO_OVERLAY
+  destination:
+    name: in-cluster
+    namespace: TO_OVERLAY
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
