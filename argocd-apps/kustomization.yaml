@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - overlays/metallb
+- overlays/ingress-nginx
