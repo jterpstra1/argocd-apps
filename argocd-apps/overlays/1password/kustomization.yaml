@@ -21,6 +21,9 @@ patches:
       path: /spec/source/path
       value: argocd-k8s-resources/onepassword/overlays/prod
     - op: replace
+      path: /spec/source/targetRevision
+      value: dev/jurre/1pass
+    - op: replace
       path: /spec/destination/namespace
       value: 1password
     - op: add

@@ -11,7 +11,7 @@ spec:
   project: TO_OVERLAY
   source:
     repoURL: https://github.com/jterpstra1/argocd-k8s-resources.git
-    targetRevision: main
+    targetRevision: TO_OVERLAY
     path: TO_OVERLAY
   destination:
     name: in-cluster
