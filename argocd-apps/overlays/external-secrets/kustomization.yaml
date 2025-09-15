@@ -1,0 +1,30 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+patches:
+- target:
+    kind: Application
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: external-secrets
+    - op: replace
+      path: /metadata/labels/env
+      value: production
+    - op: replace
+      path: /spec/project
+      value: core-apps
+    - op: replace
+      path: /spec/source/path
+      value: external-secrets
+    - op: replace
+      path: /spec/destination/namespace
+      value: external-secrets
+    - op: add
+      path: /spec/syncPolicy/automated
+      value:
+        selfHeal: true
+        prune: true
