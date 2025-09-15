@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
 - overlays/metallb
 - overlays/ingress-nginx
-- overlays/external-secrets
-- overlays/1password
+#- overlays/external-secrets
+#- overlays/1password
