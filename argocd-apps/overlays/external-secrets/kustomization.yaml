@@ -19,7 +19,7 @@ patches:
       value: core-apps
     - op: replace
       path: /spec/source/path
-      value: external-secrets
+      value: argocd-k8s-resources/external-secrets/overlays/prod
     - op: replace
       path: /spec/destination/namespace
       value: external-secrets
