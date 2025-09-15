@@ -16,6 +16,11 @@ spec:
   destination:
     name: in-cluster
     namespace: TO_OVERLAY
+  ignoreDifferences:
+  - group: apiextensions.k8s.io
+    kind: CustomResourceDefinition
+    jsonPointers:
+    - /spec/preserveUnknownFields  
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
