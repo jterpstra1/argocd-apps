@@ -24,6 +24,9 @@ patches:
       path: /spec/source/path
       value: argocd-k8s-resources/ingress-nginx/overlays/prod
     - op: replace
+      path: /spec/source/targetRevision
+      value: dev/jurre/main
+    - op: replace
       path: /spec/destination/namespace
       value: ingress-nginx
     - op: add

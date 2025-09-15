@@ -24,6 +24,9 @@ patches:
       path: /spec/source/path
       value: argocd-k8s-resources/metallb/overlays/prod
     - op: replace
+      path: /spec/source/targetRevision
+      value: main
+    - op: replace
       path: /spec/destination/namespace
       value: metallb-system
     - op: add
