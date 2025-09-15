@@ -12,12 +12,14 @@ patches:
       path: /metadata/name
       value: onepassword-connect
     - op: replace
+      path: /metadata/namespace
+      value: core-apps
+    - op: replace
       path: /metadata/labels/env
       value: production
     - op: replace
       path: /spec/project
       value: core-apps
-    - op: replace
       path: /spec/source/path
       value: argocd-k8s-resources/onepassword/overlays/prod
     - op: replace

@@ -12,6 +12,9 @@ patches:
       path: /metadata/name
       value: external-secrets
     - op: replace
+      path: /metadata/namespace
+      value: core-apps
+    - op: replace
       path: /metadata/labels/env
       value: production
     - op: replace
