@@ -25,7 +25,7 @@ patches:
       value: argocd-k8s-resources/external-secrets/overlays/prod
     - op: replace
       path: /spec/source/targetRevision
-      value: dev/jurre/external-secrets
+      value: dev/jurre/eso
     - op: replace
       path: /spec/destination/namespace
       value: external-secrets
