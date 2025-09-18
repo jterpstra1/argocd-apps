@@ -7,4 +7,3 @@ resources:
 - overlays/external-secrets
 - overlays/1password
 - overlays/cert-manager
-- overlays/managed-secrets
