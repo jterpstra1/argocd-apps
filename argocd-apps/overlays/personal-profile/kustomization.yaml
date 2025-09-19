@@ -13,13 +13,13 @@ patches:
       value: personal-profile
     - op: replace
       path: /metadata/namespace
-      value: simple-apps
+      value: public-apps
     - op: replace
       path: /metadata/labels/env
       value: production
     - op: replace
       path: /spec/project
-      value: simple-apps
+      value: public-apps
     - op: replace
       path: /spec/source/path
       value: argocd-k8s-resources/personal-profile/overlays/prod
