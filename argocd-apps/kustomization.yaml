@@ -8,3 +8,4 @@ resources:
 - overlays/1password
 - overlays/cert-manager
 - overlays/reloader
+- overlays/personal-profile
