@@ -25,7 +25,7 @@ patches:
       value: argocd-k8s-resources/personal-profile/overlays/prod
     - op: replace
       path: /spec/source/targetRevision
-      value: main
+      value: prd
     - op: replace
       path: /spec/destination/namespace
       value: personal-profile

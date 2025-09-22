@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/jterpstra1/argocd-apps.git
     targetRevision: main
-    path: argocd-apps
+    path: argocd-apps/overlays/prod
   syncPolicy:
     automated:
       selfHeal: true

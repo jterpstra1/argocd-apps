@@ -2,10 +2,24 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+# metallb
 - overlays/metallb
+
+# ingress-nginx
 - overlays/ingress-nginx
+
+# external-secrets
 - overlays/external-secrets
+
+# onepassword
 - overlays/1password
+
+# cert-manager
 - overlays/cert-manager
+
+# reloader
 - overlays/reloader
-- overlays/personal-profile
+
+# personal-profile
+# - overlays/personal-profile/prod
+# - overlays/personal-profile/dev
