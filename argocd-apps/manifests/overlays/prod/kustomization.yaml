@@ -22,4 +22,4 @@ resources:
 
 # personal-profile
 # - ../../personal-profile/overlays/prod
-# - ../../personal-profile/overlays/dev
+- ../../personal-profile/overlays/dev
