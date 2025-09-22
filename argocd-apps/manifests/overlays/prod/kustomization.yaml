@@ -3,23 +3,23 @@ kind: Kustomization
 
 resources:
 # metallb
-- overlays/metallb
+- ../../metallb
 
 # ingress-nginx
-- overlays/ingress-nginx
+- ../../ingress-nginx
 
 # external-secrets
-- overlays/external-secrets
+- ../../external-secrets
 
 # onepassword
-- overlays/1password
+- ../../1password
 
 # cert-manager
-- overlays/cert-manager
+- ../../cert-manager
 
 # reloader
-- overlays/reloader
+- ../../reloader
 
 # personal-profile
-# - overlays/personal-profile/prod
-# - overlays/personal-profile/dev
+# - ../../personal-profile/overlays/prod
+# - ../../personal-profile/overlays/dev
