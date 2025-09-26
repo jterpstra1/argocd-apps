@@ -23,3 +23,6 @@ resources:
 # personal-profile
 - ../../personal-profile/overlays/prod
 - ../../personal-profile/overlays/dev
+
+# adguard
+- ../../adguard/overlays/prod
