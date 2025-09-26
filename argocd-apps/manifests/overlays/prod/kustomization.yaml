@@ -25,4 +25,5 @@ resources:
 - ../../personal-profile/overlays/dev
 
 # adguard
-- ../../adguard/overlays/prod
+- ../../adguard/overlays/prod-a
+- ../../adguard/overlays/prod-b
