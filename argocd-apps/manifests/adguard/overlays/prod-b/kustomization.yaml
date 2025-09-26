@@ -10,7 +10,7 @@ patches:
   patch: |-
     - op: replace
       path: /metadata/name
-      value: adguard
+      value: adguard-b
     - op: replace
       path: /metadata/namespace
       value: core-apps
@@ -22,13 +22,13 @@ patches:
       value: core-apps
     - op: replace
       path: /spec/source/path
-      value: argocd-k8s-resources/adguard/overlays/prod
+      value: argocd-k8s-resources/adguard/overlays/prod-b
     - op: replace
       path: /spec/source/targetRevision
       value: main
     - op: replace
       path: /spec/destination/namespace
-      value: adguard
+      value: adguard-b
     - op: add
       path: /spec/syncPolicy/automated
       value:
