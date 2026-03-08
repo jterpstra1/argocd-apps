@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../base
+- ../../../base
 
 patches:
 - target:
@@ -10,7 +10,7 @@ patches:
   patch: |-
     - op: replace
       path: /metadata/name
-      value: ingress-nginx
+      value: metallb
     - op: replace
       path: /metadata/namespace
       value: core-apps
@@ -22,15 +22,23 @@ patches:
       value: core-apps
     - op: replace
       path: /spec/source/path
-      value: argocd-k8s-resources/ingress-nginx/overlays/prod
+      value: argocd-k8s-resources/metallb/overlays/prod
     - op: replace
       path: /spec/source/targetRevision
       value: main
     - op: replace
       path: /spec/destination/namespace
-      value: ingress-nginx
+      value: metallb-system
     - op: add
       path: /spec/syncPolicy/automated
       value:
         selfHeal: true
         prune: true
+    - op: replace
+      path: /spec/ignoreDifferences
+      value:
+      - group: "apiextensions.k8s.io"
+        kind: CustomResourceDefinition
+        name: bgppeers.metallb.io
+        jsonPointers:
+        - /spec/conversion/webhook/clientConfig/caBundle

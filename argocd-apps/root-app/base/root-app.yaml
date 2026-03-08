@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: TO_OVERLAY
   namespace: argocd
   labels:
-    env: production
+    env: TO_OVERLAY
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -14,8 +14,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/jterpstra1/argocd-apps.git
-    targetRevision: main
-    path: argocd-apps/manifests/overlays/prod
+    targetRevision: TO_OVERLAY
+    path: TO_OVERLAY
   syncPolicy:
     automated:
       selfHeal: true
