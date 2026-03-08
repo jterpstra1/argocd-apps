@@ -40,14 +40,14 @@ argocd-apps/
 
 ### Bootstrap a new cluster
 
-Generate and apply the root-app for your cluster:
+Apply the root-app for your cluster:
 
 ```bash
 # For prod cluster
-kustomize build argocd-apps/root-app/overlays/prod | kubectl apply -n argocd -f -
+kubectl apply -k argocd-apps/root-app/overlays/prod -n argocd
 
 # For vdgt-k3s cluster
-kustomize build argocd-apps/root-app/overlays/vdgt-k3s | kubectl apply -n argocd -f -
+kubectl apply -k argocd-apps/root-app/overlays/vdgt-k3s -n argocd
 ```
 
 ### Add apps to a cluster
