@@ -1,0 +1,39 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../../base
+
+patches:
+- target:
+    kind: Application
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: external-secrets
+    - op: replace
+      path: /metadata/namespace
+      value: platform-apps
+    - op: replace
+      path: /metadata/labels/env
+      value: vdgt-k3s
+    - op: replace
+      path: /spec/project
+      value: platform-apps
+    - op: replace
+      path: /spec/source/path
+      value: argocd-k8s-resources/external-secrets/overlays/vdgt-k3s
+    - op: replace
+      path: /spec/source/targetRevision
+      value: main
+    - op: replace
+      path: /spec/destination/namespace
+      value: external-secrets
+    - op: add
+      path: /spec/syncPolicy/automated
+      value:
+        selfHeal: true
+        prune: true
+    - op: add
+      path: /spec/syncPolicy/syncOptions/-
+      value: "ServerSideApply=true"

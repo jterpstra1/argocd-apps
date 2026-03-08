@@ -4,3 +4,6 @@ kind: Kustomization
 resources: 
 # onepassword
 - ../../1password/overlays/vdgt-k3s
+
+# external-secrets
+- ../../external-secrets/overlays/vdgt-k3s
