@@ -9,4 +9,4 @@ resources:
 - ../../external-secrets/overlays/vdgt-k3s
 
 # stackweaver
-- ../../stackweaver/overlays/vdgt-k3s
+#- ../../stackweaver/overlays/vdgt-k3s
