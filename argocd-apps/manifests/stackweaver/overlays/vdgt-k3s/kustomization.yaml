@@ -29,3 +29,8 @@ patches:
       - op: replace
         path: /spec/destination/namespace
         value: stackweaver
+      - op: add
+        path: /spec/syncPolicy/automated
+        value:
+          selfHeal: true
+          prune: true
